@@ -1,0 +1,43 @@
+version: 2
+
+models:
+    - name: matter_model
+      columns:
+        - name: matter_id
+          meta:
+            metrics:
+              count_of_matters:
+                type: count
+                label: 'Count of Matters'
+                description: 'The total number of products'
+            dimensions:
+              type: string
+              label: 'Matter ID'
+              description: 'The unique identifier for a matter.'
+        - name: retained_date
+          meta:
+            dimension:
+              type: date
+              label: 'Retained Date'
+              description: 'The date on which the matter was officially retained.'
+
+        - name: terminated_date
+          meta:
+            dimension:
+              type: date
+              label: 'Terminated Date'
+              description: 'The date on which the matter was officially terminated.'
+
+        - name: matter_tier
+          meta:
+            dimension:
+              type: string
+              label: 'Matter Tier'
+              description: 'Categorizes the matter by tier, reflecting its complexity or priority level.'
+
+        - name: representation_status
+          meta:
+            dimension:
+              type: string
+              label: 'Representation Status'
+              description: 'Indicates the current status of the matter representation.'

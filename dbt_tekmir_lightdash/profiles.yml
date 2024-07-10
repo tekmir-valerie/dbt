@@ -1,0 +1,12 @@
+dbt_tekmir_lightdash:
+  outputs:
+    dev:
+      dbname: postgres
+      host: aws-0-us-east-1.pooler.supabase.com
+      pass: rK7jNEBNxEw6jjisFgHX
+      port: 6543
+      schema: dbt-models
+      threads: 1
+      type: postgres
+      user: postgres.gxeameimomjthrqsfutv
+  target: dev

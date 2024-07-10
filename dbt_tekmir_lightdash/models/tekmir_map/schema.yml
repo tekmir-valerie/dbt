@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: tekmir_data
+    schema: public
+    tables:
+      - name: matter

@@ -1,0 +1,461 @@
+[0m11:27:14.873571 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A2E894AE10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A2E8987F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A2E8993550>]}
+
+
+============================== 11:27:14.876571 | b19489bf-a7cb-4508-82eb-c546feae3c67 ==============================
+[0m11:27:14.876571 [info ] [MainThread]: Running with dbt=1.8.3
+[0m11:27:14.877573 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\ValerieYuan\\.dbt', 'log_path': 'C:\\Users\\ValerieYuan\\OneDrive - Tekmir\\Desktop\\dbt\\dbt_tekmir_lightdash\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m11:27:14.892571 [info ] [MainThread]: dbt version: 1.8.3
+[0m11:27:14.893571 [info ] [MainThread]: python version: 3.11.9
+[0m11:27:14.894571 [info ] [MainThread]: python path: C:\Users\ValerieYuan\OneDrive - Tekmir\Desktop\dbt\venv\Scripts\python.exe
+[0m11:27:14.894571 [info ] [MainThread]: os info: Windows-10-10.0.22621-SP0
+[0m11:27:14.933587 [info ] [MainThread]: Using profiles dir at C:\Users\ValerieYuan\.dbt
+[0m11:27:14.934362 [info ] [MainThread]: Using profiles.yml file at C:\Users\ValerieYuan\.dbt\profiles.yml
+[0m11:27:14.934362 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\ValerieYuan\OneDrive - Tekmir\Desktop\dbt\dbt_tekmir_lightdash\dbt_project.yml
+[0m11:27:14.935423 [info ] [MainThread]: adapter type: postgres
+[0m11:27:14.936435 [info ] [MainThread]: adapter version: 1.8.2
+[0m11:27:14.984096 [info ] [MainThread]: Configuration:
+[0m11:27:14.984096 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:27:14.985201 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:27:14.985835 [info ] [MainThread]: Required dependencies:
+[0m11:27:14.985835 [debug] [MainThread]: Executing "git --help"
+[0m11:27:15.008415 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:27:15.008415 [debug] [MainThread]: STDERR: "b''"
+[0m11:27:15.009424 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:27:15.009424 [info ] [MainThread]: Connection:
+[0m11:27:15.010430 [info ] [MainThread]:   host: aws-0-us-east-1.pooler.supabase.com
+[0m11:27:15.010430 [info ] [MainThread]:   port: 6543
+[0m11:27:15.010430 [info ] [MainThread]:   user: postgres.gxeameimomjthrqsfutv
+[0m11:27:15.011428 [info ] [MainThread]:   database: postgres
+[0m11:27:15.011428 [info ] [MainThread]:   schema: dbt-models
+[0m11:27:15.012123 [info ] [MainThread]:   connect_timeout: 10
+[0m11:27:15.012711 [info ] [MainThread]:   role: None
+[0m11:27:15.012711 [info ] [MainThread]:   search_path: None
+[0m11:27:15.013720 [info ] [MainThread]:   keepalives_idle: 0
+[0m11:27:15.013720 [info ] [MainThread]:   sslmode: None
+[0m11:27:15.013720 [info ] [MainThread]:   sslcert: None
+[0m11:27:15.014719 [info ] [MainThread]:   sslkey: None
+[0m11:27:15.015749 [info ] [MainThread]:   sslrootcert: None
+[0m11:27:15.015749 [info ] [MainThread]:   application_name: dbt
+[0m11:27:15.016727 [info ] [MainThread]:   retries: 1
+[0m11:27:15.016727 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m11:27:15.017720 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m11:27:17.336197 [debug] [MainThread]: Using postgres connection "debug"
+[0m11:27:17.336197 [debug] [MainThread]: On debug: select 1 as id
+[0m11:27:17.337187 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:27:17.596083 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "aws-0-us-east-1.pooler.supabase.com" (44.208.221.186), port 6543 failed: error received from server in SCRAM exchange: Wrong password
+
+[0m11:27:17.836247 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m11:27:17.837247 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m11:27:17.837247 [debug] [MainThread]: On debug: No close available on handle
+[0m11:27:17.838247 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m11:27:17.840244 [info ] [MainThread]: [31m1 check failed:[0m
+[0m11:27:17.841244 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "aws-0-us-east-1.pooler.supabase.com" (44.208.221.186), port 6543 failed: error received from server in SCRAM exchange: Wrong password
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m11:27:17.842244 [debug] [MainThread]: Command `dbt debug` failed at 11:27:17.842244 after 3.03 seconds
+[0m11:27:17.843251 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m11:27:17.844251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A2E233A250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A2E897A710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A2E897B5D0>]}
+[0m11:27:17.844251 [debug] [MainThread]: Flushing usage events
+[0m11:28:49.635652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001389B229450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001389B223590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001389B223290>]}
+
+
+============================== 11:28:49.638669 | 694c4761-cab1-4478-ba3c-920eedfa58fe ==============================
+[0m11:28:49.638669 [info ] [MainThread]: Running with dbt=1.8.3
+[0m11:28:49.638669 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ValerieYuan\\OneDrive - Tekmir\\Desktop\\dbt\\dbt_tekmir_lightdash', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\ValerieYuan\\OneDrive - Tekmir\\Desktop\\dbt\\dbt_tekmir_lightdash\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:28:49.652776 [info ] [MainThread]: dbt version: 1.8.3
+[0m11:28:49.653782 [info ] [MainThread]: python version: 3.11.9
+[0m11:28:49.653782 [info ] [MainThread]: python path: C:\Users\ValerieYuan\OneDrive - Tekmir\Desktop\dbt\venv\Scripts\python.exe
+[0m11:28:49.654782 [info ] [MainThread]: os info: Windows-10-10.0.22621-SP0
+[0m11:28:49.693103 [info ] [MainThread]: Using profiles dir at C:\Users\ValerieYuan\OneDrive - Tekmir\Desktop\dbt\dbt_tekmir_lightdash
+[0m11:28:49.694072 [info ] [MainThread]: Using profiles.yml file at C:\Users\ValerieYuan\OneDrive - Tekmir\Desktop\dbt\dbt_tekmir_lightdash\profiles.yml
+[0m11:28:49.694072 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\ValerieYuan\OneDrive - Tekmir\Desktop\dbt\dbt_tekmir_lightdash\dbt_project.yml
+[0m11:28:49.695460 [info ] [MainThread]: adapter type: postgres
+[0m11:28:49.695460 [info ] [MainThread]: adapter version: 1.8.2
+[0m11:28:49.744857 [info ] [MainThread]: Configuration:
+[0m11:28:49.745840 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:28:49.746807 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:28:49.746807 [info ] [MainThread]: Required dependencies:
+[0m11:28:49.747801 [debug] [MainThread]: Executing "git --help"
+[0m11:28:49.768080 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:28:49.769089 [debug] [MainThread]: STDERR: "b''"
+[0m11:28:49.769089 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:28:49.769089 [info ] [MainThread]: Connection:
+[0m11:28:49.770117 [info ] [MainThread]:   host: aws-0-us-east-1.pooler.supabase.com
+[0m11:28:49.770117 [info ] [MainThread]:   port: 6543
+[0m11:28:49.771083 [info ] [MainThread]:   user: postgres.gxeameimomjthrqsfutv
+[0m11:28:49.771083 [info ] [MainThread]:   database: postgres
+[0m11:28:49.771083 [info ] [MainThread]:   schema: dbt-models
+[0m11:28:49.772128 [info ] [MainThread]:   connect_timeout: 10
+[0m11:28:49.772128 [info ] [MainThread]:   role: None
+[0m11:28:49.772128 [info ] [MainThread]:   search_path: None
+[0m11:28:49.773110 [info ] [MainThread]:   keepalives_idle: 0
+[0m11:28:49.773110 [info ] [MainThread]:   sslmode: None
+[0m11:28:49.774587 [info ] [MainThread]:   sslcert: None
+[0m11:28:49.774587 [info ] [MainThread]:   sslkey: None
+[0m11:28:49.774587 [info ] [MainThread]:   sslrootcert: None
+[0m11:28:49.775639 [info ] [MainThread]:   application_name: dbt
+[0m11:28:49.775639 [info ] [MainThread]:   retries: 1
+[0m11:28:49.776627 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m11:28:49.777626 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m11:28:49.810777 [debug] [MainThread]: Using postgres connection "debug"
+[0m11:28:49.810777 [debug] [MainThread]: On debug: select 1 as id
+[0m11:28:49.810777 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:28:50.120372 [debug] [MainThread]: SQL status: SELECT 1 in 0.309 seconds
+[0m11:28:50.124358 [debug] [MainThread]: On debug: Close
+[0m11:28:50.125362 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:28:50.126357 [info ] [MainThread]: [32mAll checks passed![0m
+[0m11:28:50.127358 [debug] [MainThread]: Command `dbt debug` succeeded at 11:28:50.127358 after 0.55 seconds
+[0m11:28:50.128359 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m11:28:50.130370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013894BDA250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001389B82C0D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001389B82C210>]}
+[0m11:28:50.132368 [debug] [MainThread]: Flushing usage events
+[0m11:37:01.066755 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AF56A4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AF5B2C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AF5B0CD0>]}
+
+
+============================== 11:37:01.069761 | fcc28474-7bed-4b7c-9481-f9f20c25525d ==============================
+[0m11:37:01.069761 [info ] [MainThread]: Running with dbt=1.8.3
+[0m11:37:01.070848 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ValerieYuan\\OneDrive - Tekmir\\Desktop\\dbt\\dbt_tekmir_lightdash', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\ValerieYuan\\OneDrive - Tekmir\\Desktop\\dbt\\dbt_tekmir_lightdash\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:37:01.194085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fcc28474-7bed-4b7c-9481-f9f20c25525d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AF5B0310>]}
+[0m11:37:01.224637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fcc28474-7bed-4b7c-9481-f9f20c25525d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AC87DD90>]}
+[0m11:37:01.226428 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m11:37:01.256195 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m11:37:01.256410 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m11:37:01.257273 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'fcc28474-7bed-4b7c-9481-f9f20c25525d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AF6E1450>]}
+[0m11:37:03.343271 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fcc28474-7bed-4b7c-9481-f9f20c25525d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213ACD34610>]}
+[0m11:37:03.420898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fcc28474-7bed-4b7c-9481-f9f20c25525d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AC0FA5D0>]}
+[0m11:37:03.420898 [info ] [MainThread]: Found 3 models, 4 data tests, 1 source, 415 macros
+[0m11:37:03.421901 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fcc28474-7bed-4b7c-9481-f9f20c25525d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213B0B03990>]}
+[0m11:37:03.422899 [info ] [MainThread]: 
+[0m11:37:03.423897 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m11:37:03.427409 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m11:37:03.467006 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m11:37:03.467006 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dbt_tekmir_lightdash", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m11:37:03.468007 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:37:03.689176 [debug] [ThreadPool]: SQL status: SELECT 84 in 0.221 seconds
+[0m11:37:03.691256 [debug] [ThreadPool]: On list_postgres: Close
+[0m11:37:03.693005 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now create_postgres_dbt-models)
+[0m11:37:03.693005 [debug] [ThreadPool]: Creating schema "database: "postgres"
+schema: "dbt-models"
+"
+[0m11:37:03.698670 [debug] [ThreadPool]: Using postgres connection "create_postgres_dbt-models"
+[0m11:37:03.698670 [debug] [ThreadPool]: On create_postgres_dbt-models: BEGIN
+[0m11:37:03.698670 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:37:03.901555 [debug] [ThreadPool]: SQL status: BEGIN in 0.203 seconds
+[0m11:37:03.902611 [debug] [ThreadPool]: Using postgres connection "create_postgres_dbt-models"
+[0m11:37:03.903565 [debug] [ThreadPool]: On create_postgres_dbt-models: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dbt_tekmir_lightdash", "target_name": "dev", "connection_name": "create_postgres_dbt-models"} */
+create schema if not exists "dbt-models"
+[0m11:37:03.929568 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.025 seconds
+[0m11:37:03.931605 [debug] [ThreadPool]: On create_postgres_dbt-models: COMMIT
+[0m11:37:03.932603 [debug] [ThreadPool]: Using postgres connection "create_postgres_dbt-models"
+[0m11:37:03.933601 [debug] [ThreadPool]: On create_postgres_dbt-models: COMMIT
+[0m11:37:03.963288 [debug] [ThreadPool]: SQL status: COMMIT in 0.029 seconds
+[0m11:37:03.964284 [debug] [ThreadPool]: On create_postgres_dbt-models: Close
+[0m11:37:03.966831 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_dbt-models'
+[0m11:37:03.971813 [debug] [ThreadPool]: Using postgres connection "list_postgres_dbt-models"
+[0m11:37:03.972811 [debug] [ThreadPool]: On list_postgres_dbt-models: BEGIN
+[0m11:37:03.972811 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:37:04.170725 [debug] [ThreadPool]: SQL status: BEGIN in 0.198 seconds
+[0m11:37:04.171707 [debug] [ThreadPool]: Using postgres connection "list_postgres_dbt-models"
+[0m11:37:04.172710 [debug] [ThreadPool]: On list_postgres_dbt-models: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dbt_tekmir_lightdash", "target_name": "dev", "connection_name": "list_postgres_dbt-models"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt-models'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt-models'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt-models'
+  
+[0m11:37:04.193927 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.020 seconds
+[0m11:37:04.194915 [debug] [ThreadPool]: On list_postgres_dbt-models: ROLLBACK
+[0m11:37:04.212866 [debug] [ThreadPool]: On list_postgres_dbt-models: Close
+[0m11:37:04.216539 [debug] [MainThread]: Using postgres connection "master"
+[0m11:37:04.216539 [debug] [MainThread]: On master: BEGIN
+[0m11:37:04.216539 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:37:04.387311 [debug] [MainThread]: SQL status: BEGIN in 0.171 seconds
+[0m11:37:04.389307 [debug] [MainThread]: Using postgres connection "master"
+[0m11:37:04.390306 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dbt_tekmir_lightdash", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m11:37:04.427863 [debug] [MainThread]: SQL status: SELECT 89 in 0.037 seconds
+[0m11:37:04.430866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fcc28474-7bed-4b7c-9481-f9f20c25525d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AF7C7950>]}
+[0m11:37:04.430866 [debug] [MainThread]: On master: ROLLBACK
+[0m11:37:04.470293 [debug] [MainThread]: Using postgres connection "master"
+[0m11:37:04.471316 [debug] [MainThread]: On master: BEGIN
+[0m11:37:04.520383 [debug] [MainThread]: SQL status: BEGIN in 0.048 seconds
+[0m11:37:04.521378 [debug] [MainThread]: On master: COMMIT
+[0m11:37:04.521378 [debug] [MainThread]: Using postgres connection "master"
+[0m11:37:04.522421 [debug] [MainThread]: On master: COMMIT
+[0m11:37:04.567487 [debug] [MainThread]: SQL status: COMMIT in 0.045 seconds
+[0m11:37:04.568500 [debug] [MainThread]: On master: Close
+[0m11:37:04.570498 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:37:04.571499 [info ] [MainThread]: 
+[0m11:37:04.580011 [debug] [Thread-1 (]: Began running node model.dbt_tekmir_lightdash.matter_model
+[0m11:37:04.581009 [info ] [Thread-1 (]: 1 of 3 START sql view model dbt-models.matter_model ............................ [RUN]
+[0m11:37:04.582008 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.dbt_tekmir_lightdash.matter_model'
+[0m11:37:04.582008 [debug] [Thread-1 (]: Began compiling node model.dbt_tekmir_lightdash.matter_model
+[0m11:37:04.587517 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_tekmir_lightdash.matter_model"
+[0m11:37:04.589517 [debug] [Thread-1 (]: Began executing node model.dbt_tekmir_lightdash.matter_model
+[0m11:37:04.610615 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_tekmir_lightdash.matter_model"
+[0m11:37:04.612895 [debug] [Thread-1 (]: Using postgres connection "model.dbt_tekmir_lightdash.matter_model"
+[0m11:37:04.612895 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.matter_model: BEGIN
+[0m11:37:04.613905 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:37:04.790808 [debug] [Thread-1 (]: SQL status: BEGIN in 0.177 seconds
+[0m11:37:04.791810 [debug] [Thread-1 (]: Using postgres connection "model.dbt_tekmir_lightdash.matter_model"
+[0m11:37:04.791810 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.matter_model: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dbt_tekmir_lightdash", "target_name": "dev", "node_id": "model.dbt_tekmir_lightdash.matter_model"} */
+
+  create view "postgres"."dbt-models"."matter_model__dbt_tmp"
+    
+    
+  as (
+    select id as matter_id,
+    retained_date,
+    terminated_date,
+    matter_tier,
+    representation_status
+from "postgres"."public"."matter"
+  );
+[0m11:37:04.817165 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.025 seconds
+[0m11:37:04.822163 [debug] [Thread-1 (]: Using postgres connection "model.dbt_tekmir_lightdash.matter_model"
+[0m11:37:04.823164 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.matter_model: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dbt_tekmir_lightdash", "target_name": "dev", "node_id": "model.dbt_tekmir_lightdash.matter_model"} */
+alter table "postgres"."dbt-models"."matter_model__dbt_tmp" rename to "matter_model"
+[0m11:37:04.843030 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.020 seconds
+[0m11:37:04.855118 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.matter_model: COMMIT
+[0m11:37:04.855118 [debug] [Thread-1 (]: Using postgres connection "model.dbt_tekmir_lightdash.matter_model"
+[0m11:37:04.856131 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.matter_model: COMMIT
+[0m11:37:04.881189 [debug] [Thread-1 (]: SQL status: COMMIT in 0.025 seconds
+[0m11:37:04.886640 [debug] [Thread-1 (]: Applying DROP to: "postgres"."dbt-models"."matter_model__dbt_backup"
+[0m11:37:04.889653 [debug] [Thread-1 (]: Using postgres connection "model.dbt_tekmir_lightdash.matter_model"
+[0m11:37:04.890652 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.matter_model: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dbt_tekmir_lightdash", "target_name": "dev", "node_id": "model.dbt_tekmir_lightdash.matter_model"} */
+drop view if exists "postgres"."dbt-models"."matter_model__dbt_backup" cascade
+[0m11:37:04.926300 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.035 seconds
+[0m11:37:04.930180 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.matter_model: Close
+[0m11:37:04.932178 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fcc28474-7bed-4b7c-9481-f9f20c25525d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213B0EC7B90>]}
+[0m11:37:04.933177 [info ] [Thread-1 (]: 1 of 3 OK created sql view model dbt-models.matter_model ....................... [[32mCREATE VIEW[0m in 0.35s]
+[0m11:37:04.934180 [debug] [Thread-1 (]: Finished running node model.dbt_tekmir_lightdash.matter_model
+[0m11:37:04.934180 [debug] [Thread-1 (]: Began running node model.dbt_tekmir_lightdash.my_first_dbt_model
+[0m11:37:04.935179 [info ] [Thread-1 (]: 2 of 3 START sql table model dbt-models.my_first_dbt_model ..................... [RUN]
+[0m11:37:04.935179 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_tekmir_lightdash.matter_model, now model.dbt_tekmir_lightdash.my_first_dbt_model)
+[0m11:37:04.936177 [debug] [Thread-1 (]: Began compiling node model.dbt_tekmir_lightdash.my_first_dbt_model
+[0m11:37:04.940034 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_tekmir_lightdash.my_first_dbt_model"
+[0m11:37:04.941039 [debug] [Thread-1 (]: Began executing node model.dbt_tekmir_lightdash.my_first_dbt_model
+[0m11:37:04.956066 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_tekmir_lightdash.my_first_dbt_model"
+[0m11:37:04.957396 [debug] [Thread-1 (]: Using postgres connection "model.dbt_tekmir_lightdash.my_first_dbt_model"
+[0m11:37:04.957396 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.my_first_dbt_model: BEGIN
+[0m11:37:04.958403 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:37:05.162128 [debug] [Thread-1 (]: SQL status: BEGIN in 0.204 seconds
+[0m11:37:05.163129 [debug] [Thread-1 (]: Using postgres connection "model.dbt_tekmir_lightdash.my_first_dbt_model"
+[0m11:37:05.163129 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dbt_tekmir_lightdash", "target_name": "dev", "node_id": "model.dbt_tekmir_lightdash.my_first_dbt_model"} */
+
+  
+    
+
+  create  table "postgres"."dbt-models"."my_first_dbt_model__dbt_tmp"
+  
+  
+    as
+  
+  (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+  
+[0m11:37:05.182127 [debug] [Thread-1 (]: SQL status: SELECT 2 in 0.019 seconds
+[0m11:37:05.184209 [debug] [Thread-1 (]: Using postgres connection "model.dbt_tekmir_lightdash.my_first_dbt_model"
+[0m11:37:05.184209 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dbt_tekmir_lightdash", "target_name": "dev", "node_id": "model.dbt_tekmir_lightdash.my_first_dbt_model"} */
+alter table "postgres"."dbt-models"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m11:37:05.217609 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.032 seconds
+[0m11:37:05.220582 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.my_first_dbt_model: COMMIT
+[0m11:37:05.221567 [debug] [Thread-1 (]: Using postgres connection "model.dbt_tekmir_lightdash.my_first_dbt_model"
+[0m11:37:05.221567 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.my_first_dbt_model: COMMIT
+[0m11:37:05.244321 [debug] [Thread-1 (]: SQL status: COMMIT in 0.023 seconds
+[0m11:37:05.247836 [debug] [Thread-1 (]: Applying DROP to: "postgres"."dbt-models"."my_first_dbt_model__dbt_backup"
+[0m11:37:05.250915 [debug] [Thread-1 (]: Using postgres connection "model.dbt_tekmir_lightdash.my_first_dbt_model"
+[0m11:37:05.250915 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dbt_tekmir_lightdash", "target_name": "dev", "node_id": "model.dbt_tekmir_lightdash.my_first_dbt_model"} */
+drop table if exists "postgres"."dbt-models"."my_first_dbt_model__dbt_backup" cascade
+[0m11:37:05.270117 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.018 seconds
+[0m11:37:05.272085 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.my_first_dbt_model: Close
+[0m11:37:05.273085 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fcc28474-7bed-4b7c-9481-f9f20c25525d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213B0F8C350>]}
+[0m11:37:05.273085 [info ] [Thread-1 (]: 2 of 3 OK created sql table model dbt-models.my_first_dbt_model ................ [[32mSELECT 2[0m in 0.34s]
+[0m11:37:05.275086 [debug] [Thread-1 (]: Finished running node model.dbt_tekmir_lightdash.my_first_dbt_model
+[0m11:37:05.276089 [debug] [Thread-1 (]: Began running node model.dbt_tekmir_lightdash.my_second_dbt_model
+[0m11:37:05.277116 [info ] [Thread-1 (]: 3 of 3 START sql view model dbt-models.my_second_dbt_model ..................... [RUN]
+[0m11:37:05.278128 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_tekmir_lightdash.my_first_dbt_model, now model.dbt_tekmir_lightdash.my_second_dbt_model)
+[0m11:37:05.279121 [debug] [Thread-1 (]: Began compiling node model.dbt_tekmir_lightdash.my_second_dbt_model
+[0m11:37:05.281210 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_tekmir_lightdash.my_second_dbt_model"
+[0m11:37:05.282121 [debug] [Thread-1 (]: Began executing node model.dbt_tekmir_lightdash.my_second_dbt_model
+[0m11:37:05.285121 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_tekmir_lightdash.my_second_dbt_model"
+[0m11:37:05.286117 [debug] [Thread-1 (]: Using postgres connection "model.dbt_tekmir_lightdash.my_second_dbt_model"
+[0m11:37:05.286117 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.my_second_dbt_model: BEGIN
+[0m11:37:05.286117 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:37:05.452781 [debug] [Thread-1 (]: SQL status: BEGIN in 0.166 seconds
+[0m11:37:05.453796 [debug] [Thread-1 (]: Using postgres connection "model.dbt_tekmir_lightdash.my_second_dbt_model"
+[0m11:37:05.453796 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dbt_tekmir_lightdash", "target_name": "dev", "node_id": "model.dbt_tekmir_lightdash.my_second_dbt_model"} */
+
+  create view "postgres"."dbt-models"."my_second_dbt_model__dbt_tmp"
+    
+    
+  as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "postgres"."dbt-models"."my_first_dbt_model"
+where id = 1
+  );
+[0m11:37:05.474180 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.020 seconds
+[0m11:37:05.476653 [debug] [Thread-1 (]: Using postgres connection "model.dbt_tekmir_lightdash.my_second_dbt_model"
+[0m11:37:05.476653 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dbt_tekmir_lightdash", "target_name": "dev", "node_id": "model.dbt_tekmir_lightdash.my_second_dbt_model"} */
+alter table "postgres"."dbt-models"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m11:37:05.495171 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.018 seconds
+[0m11:37:05.498488 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.my_second_dbt_model: COMMIT
+[0m11:37:05.499478 [debug] [Thread-1 (]: Using postgres connection "model.dbt_tekmir_lightdash.my_second_dbt_model"
+[0m11:37:05.499478 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.my_second_dbt_model: COMMIT
+[0m11:37:05.520053 [debug] [Thread-1 (]: SQL status: COMMIT in 0.020 seconds
+[0m11:37:05.525048 [debug] [Thread-1 (]: Applying DROP to: "postgres"."dbt-models"."my_second_dbt_model__dbt_backup"
+[0m11:37:05.526558 [debug] [Thread-1 (]: Using postgres connection "model.dbt_tekmir_lightdash.my_second_dbt_model"
+[0m11:37:05.527567 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dbt_tekmir_lightdash", "target_name": "dev", "node_id": "model.dbt_tekmir_lightdash.my_second_dbt_model"} */
+drop view if exists "postgres"."dbt-models"."my_second_dbt_model__dbt_backup" cascade
+[0m11:37:05.547235 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.019 seconds
+[0m11:37:05.549246 [debug] [Thread-1 (]: On model.dbt_tekmir_lightdash.my_second_dbt_model: Close
+[0m11:37:05.551235 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fcc28474-7bed-4b7c-9481-f9f20c25525d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213B0F43750>]}
+[0m11:37:05.551235 [info ] [Thread-1 (]: 3 of 3 OK created sql view model dbt-models.my_second_dbt_model ................ [[32mCREATE VIEW[0m in 0.27s]
+[0m11:37:05.553863 [debug] [Thread-1 (]: Finished running node model.dbt_tekmir_lightdash.my_second_dbt_model
+[0m11:37:05.554848 [debug] [MainThread]: Using postgres connection "master"
+[0m11:37:05.556356 [debug] [MainThread]: On master: BEGIN
+[0m11:37:05.557365 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:37:05.740128 [debug] [MainThread]: SQL status: BEGIN in 0.183 seconds
+[0m11:37:05.741127 [debug] [MainThread]: On master: COMMIT
+[0m11:37:05.742125 [debug] [MainThread]: Using postgres connection "master"
+[0m11:37:05.742125 [debug] [MainThread]: On master: COMMIT
+[0m11:37:05.761294 [debug] [MainThread]: SQL status: COMMIT in 0.019 seconds
+[0m11:37:05.762323 [debug] [MainThread]: On master: Close
+[0m11:37:05.763320 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:37:05.764320 [debug] [MainThread]: Connection 'create_postgres_dbt-models' was properly closed.
+[0m11:37:05.764320 [debug] [MainThread]: Connection 'list_postgres_dbt-models' was properly closed.
+[0m11:37:05.765969 [debug] [MainThread]: Connection 'model.dbt_tekmir_lightdash.my_second_dbt_model' was properly closed.
+[0m11:37:05.765969 [info ] [MainThread]: 
+[0m11:37:05.767846 [info ] [MainThread]: Finished running 2 view models, 1 table model in 0 hours 0 minutes and 2.34 seconds (2.34s).
+[0m11:37:05.769854 [debug] [MainThread]: Command end result
+[0m11:37:05.790884 [info ] [MainThread]: 
+[0m11:37:05.791862 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:37:05.791862 [info ] [MainThread]: 
+[0m11:37:05.792366 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m11:37:05.793372 [debug] [MainThread]: Command `dbt run` succeeded at 11:37:05.793372 after 4.79 seconds
+[0m11:37:05.793372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AF336D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213A8EBA250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AF5B0F50>]}
+[0m11:37:05.793372 [debug] [MainThread]: Flushing usage events
